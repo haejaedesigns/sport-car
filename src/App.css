@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-height: 120vh;
+    overflow: hidden;
+    color: white;
+}
+
+.app-bar {
+    width: 60%;
+    height: 50px;
+    font-family: 'Perfect Dark (BRK)', sans-serif;
+    margin-left: 250px;
+    margin-top: 10px;
+    border-radius: 1rem;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-around;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: slideInFromTop 0.5s ease-in forwards;
+    animation-delay: 0.6s;
+}
+
+.main-body {
+    width: 100%;
+    padding: 50px;
+    height: 120vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: 'Dungeon Depths', sans-serif;
+}
+
+.left {
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    background-color: rgba(221, 237, 255, 0.678);
+    border-radius: 30px;
+    padding-left: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: -70px;
+    flex-direction: column;
+    gap: 15px;
+    animation: slideInFromLeft 0.5s ease-in forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.title h1{
+    font-size: .8rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    letter-spacing: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    animation: typewriter 2s steps(20, end) forwards;
+    animation-delay: 0.9s;
+}
+
+.description p{
+    font-size: 0.6rem;
+    color: rgb(2, 2, 2);
+    line-height: 2;
+    margin-bottom: 90px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    animation: typewriter 2s steps(20, end) forwards;
+    animation-delay: 0.95s;
+}
+
+.middle {
+    width: 75%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.right {
+    width: 55%;
+    height: 80vh;
+    padding-left: 60px;
+    padding-right: 20px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: slideInFromRight 0.5s ease-in forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.car-box {
+    width: 80%;
+    height: 60vh;
+    border-radius: 20px;
+    background-color: rgba(73, 73, 73, 0.836);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+}
+
+.overlay {
+    width: 65%;
+    height: 90vh;
+    padding-bottom: 90px;
+    display: flex;
+    animation: cameraPullIn 1s ease-in, 
+                cameraPullOut 1s ease-out 5s forwards,
+                pulseLoop 1s infinite alternate,
+                cameraPullIn 1s ease-in 10.8s forwards;
+    position: fixed;
+}
+
+.overlay img{
+    width: 95%;
+    height: 60vh;
+    padding-bottom: 10px;
+    margin-top: 180px;
+    filter: drop-shadow(0 13px 0.75rem black);
+}
+
+.overlay2 {
+    width: 65%;
+    height: 90vh;
+    padding-bottom: 90px;
+    display: flex;
+    animation: cameraPullIn 1s ease-in 5.4s forwards, 
+                pulseLoop 1s infinite alternate,
+                cameraPullOut 0.6s ease-out 10.5s forwards;
+    position: fixed;
+    opacity: 0;
+}
+
+.overlay2 img{
+    width: 95%;
+    height: 60vh;
+    padding-bottom: 10px;
+    margin-top: 180px;
+    filter: drop-shadow(0 13px 0.75rem black);
+}
+
+.items{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(71, 71, 71, 0.74);
+    border-radius: 20px;
+}
+
+.items.active {
+    background-color: rgba(255, 255, 255, 0.74);
+    color: black;
+}
+
+.items:hover {
+    background-color: rgba(255, 255, 255, 0.74);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.items:hover a {
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.items a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1E3A8A;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 600;
+    font-family: 'Airbeat', sans-serif;
+    letter-spacing: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #2563EB;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cameraPullIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes cameraPullOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.spcar {
+    animation: pulseLoop 0.7s infinite alternate;
+}
+
+@keyframes pulseLoop {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    100% {
+        transform: scale(1.08);
+        filter: brightness(1.3);
+    }
+}

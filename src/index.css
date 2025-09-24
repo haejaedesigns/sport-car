@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #ff2d55;
+  --secondary-color: #222;
+  --accent-color: #00c3ff;
+  --background-color: #020202;
+  --text-color: #ffffff;
+  --border-radius: 8px;
+  --font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/bg.jpg');
+}
